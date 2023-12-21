@@ -1,0 +1,35 @@
+
+server:
+    port: 8095
+    servlet:
+        contextPath: /api/v1
+spring:
+    profiles:
+        active: default
+    datasource:
+        driverClassName: org.h2.Driver
+        url: jdbc:h2:file:/data/canalplus
+        username: sa
+        password: 
+    h2:
+        console:
+            enabled: true
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        show-sql: true
+        generate-ddl: false
+        defer-datasource-initialization: true
+     #   hibernate:
+     #      ddl-auto: none   #update
+    sql:
+        init:
+            mode: always
+     
+
+springdoc:
+  swagger-ui:
+    use-root-path: true
+
+
+
+
